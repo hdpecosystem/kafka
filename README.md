@@ -1,132 +1,147 @@
-Skip to content
-Search or jump to…
+<h1> HADOOP	[Deployment]</h1>
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@CSiingh 
-CSiingh
-/
-HadoopCluster-Deployment
-Private
-1
-00
- Code Issues 0 Pull requests 0 Actions Projects 1 Security Insights Settings
-HadoopCluster-Deployment
-/
-README.md
- 
-
-1
-<h1> HADOOP [Deployment]</h1>
-2
-​
-3
 HADOOP Ecosystem: [Cluster Storage, Process, Computations] : Uses for the Big-Data solution. Batch Interactive and Real-Time Data Access with Hadoop.
-4
 ----------------------------------------------|
-5
-​
-6
+
 Big -Data : Term means when the volume & variant of data are not able to fit into any device or any tool does not able to get insight for output that time we say it big - data. That time we uses Tools that could handle it. Now a Days We are getting different shape & size of data and also we have different solutions in the market to deal with it.
-7
-​
-8
+
 <table>
-9
   <tr>
-10
     <th>Hadoop Framework</th>
-11
     <th>Hadoop Components</th>
-12
        <th>Description</th>
-13
     </tr>
-14
   <tr>
-15
    <td ROWSPAN="1">Operating System</td>
-16
   <td>Yarn</td>
-17
   <td>Operating System for Hadoop(Hadoop Cluster Resource Management)</td>
-18
   </tr>
-19
   <tr>
-20
    <td ROWSPAN="2">Data Storage</td>
-21
   <td>HDFS</td>
-22
     <td>Hadoop Distributed File System</td>
-23
   </tr>
-24
   <tr>
-25
   <td>HBASE</td>
-26
     <td>A columnar database that uses HDFS for its storage</td>
-27
   </tr>
-28
-​
-29
+
   <tr>  
-30
    <td ROWSPAN="2">Visulization & UI Framework </td>
-31
   <td>Hue</td>
-32
   <td>A user and administrative interface that lets you browse HDFS files, run Pig and Hive queries and schedule workflows through Oozie</td>
-33
   </tr>
-34
    <tr>
-35
      <td>HCATALOG</td>
-36
     <td>A service that provides a relational view of data you store in HDFS</td>
-37
   </tr>
-38
   <tr>
-39
    <td ROWSPAN="1">Job Scheduling</td>
-40
   <td>OOZIE</td>
-41
   <td>A job-scheduling tool</td>
-42
   </tr>
-43
   <tr>
-44
   <td ROWSPAN="1">Coordinate the Work</td>  
-45
   <td>ZooKEEPER</td>
-@CSiingh
-Commit changes
-Commit summary
-Update README.md
-Optional extended description
-Add an optional extended description…
- Commit directly to the master branch.
- Create a new branch for this commit and start a pull request. Learn more about pull requests.
- 
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+       <td>A coordination service used by distributed applications such as Hadoop,HBase, Storm, Hive and Kafka</td>
+  </tr>
+  <tr>
+   <td ROWSPAN="1">Security</td>
+  <td>KERBEROS</td>
+    <td>The Network authentication protocol.</td>
+  </tr>
+  <tr>
+    <TD ROWSPAN="4">Data Manipulation</TD>
+  <td>PIG</td>
+    <td>A framework for analyzing large data sets that let you create data pipelines</td>
+  </tr>
+  <tr>
+  <td>HIVE</td>
+  <td>A distributed data warehouse for HDFS data that provides a SQL-like layer to this data</td>
+  </tr>
+  <tr>
+  <td>IMPALA</td>
+    <td>Its provide SQL-layer that reside on top of HDFS.</td>
+  </tr>
+   <td>AVRO</td>
+   <td>Framework for transforming data into a compact binary format</td>
+  </tr>
+   <tr>
+   <td ROWSPAN="3">Data Processing</td>  
+  <td>Tez</td>
+  <td>A data-processing framework for batch processing that also provides interactive querying capabilities</td>
+  </tr>
+   <tr>
+  <td>Spark</td>
+  <td>An object-relational mapping library that supports real-time stream processing</td>
+   </tr>
+  <td>Mapreduce</td>
+  <td>MapReduce is a programming model and a framework for parallel data processing of large data sets.</td>
+  </tr>
+  <tr>
+  <td ROWSPAN="4">Data Ingestion</td>
+  <td>SQOOP</td>
+  <td>A data movement tool that moves data between HDFS and relational databases</td>
+   </tr>
+  <tr>
+  <td>Storm</td>
+  <td>An object-relational mapping library that supports real-time stream processing</td>
+   </tr>
+  <tr>
+  <td>FLUME</td>
+    <td>Data-flow tool for moving streaming data into Hadoop</td>
+  </tr>
+  <tr>
+  <td>KAFKA</td>
+    <td>A message-queuing framework that handles large amounts of real-time data traffic</td>
+   </tr>
+</table>
+
+
+## DEPLOYEMENT OF HADOOP ECOSYSTEM - "Documentation" :books:
+
+<a href="https://github.com/CSiingh/Hadoop/tree/master/Deployment/Standalone" title="title"> Click **Standalone** :page_facing_up: </a>
+
+Standalone: All Hadoop services run in a single JVM, and there are no daemons. In this mode, Hadoop uses the local file system and not
+HDFS for storing its data, and MapReduce jobs run with a single mapper and a single reducer. This deployment model is best suited for developers to run their code.
+Daemon is a UNIX or Linux long-running background process that answers requests for services
+
+ #### Prerequisite Hardware
+<table>
+    <tr>
+    <th>S.No</th>
+     <th>OS</th>
+     <th>Java</th>
+     <th>Memory</th>
+      <th>Hard Disk </th>
+     </tr>
+    <tr>
+      <td>1</td>
+      <td> Linux/ Unix</td>
+      <td> Recommended Java version that match OS Version</td>
+      <td> 512GB-2GB</td>
+      <td> 1TB</td>
+    </tr>
+  </table>
+
+[Click  **MultiNode** ](https://github.com/CSiingh/Hadoop/tree/master/Deployment/MultiNode) :page_facing_up:
+
+All daemons (such as the DataNode, NameNode and ResourceManager processes) run on a single server. However, you can't use this in a real production environment — there is no way to configure data replication or high availability when all you have got is a single node!
+
+ #### Prerequisite Hardware
+<table>
+    <tr>
+    <th>S.No</th>
+     <th>OS</th>
+     <th>Java</th>
+     <th>Memory</th>
+      <th>Hard Disk </th>
+     </tr>
+    <tr>
+      <td>1</td>
+      <td> Linux/ Unix</td>
+      <td> Recommended Java version that match OS Version</td>
+      <td> 4GB-8GB  </td>
+      <td> 1-4 TB</td>
+    </tr>
+  </table>
